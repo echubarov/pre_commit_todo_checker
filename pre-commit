@@ -1,0 +1,20 @@
+#!/bin/sh
+
+exec < /dev/tty
+
+git_files=$(git diff HEAD --name-only)
+python $PWD\\.git\\hooks\\todo_checker\\todo_checker.py $git_files
+
+ret=$?
+
+if [ "$ret" -eq "0" ]
+then
+	echo commiting...
+	exit 0
+fi
+
+if [ "$ret" -eq "1" ]
+then
+	echo aborting commit...
+	exit 1
+fi
