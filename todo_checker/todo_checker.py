@@ -33,8 +33,17 @@ i = 1
 if len(sys.argv) == 1:
     exit(exit_commit)
 
-# iterate through files in list and search for target words
 files_to_check = get_file_list(sys.argv)
+
+# remove files that are marked in git as deleted from list
+for file in files_to_check:
+    try:
+        file.open()
+    except FileNotFoundError:
+        files_to_check.remove(file)
+        continue
+
+# iterate through files in list and search for target words
 for file in files_to_check:
     # search for existing todos in diff
     diff_lines_with_target = get_diff_lines(file)

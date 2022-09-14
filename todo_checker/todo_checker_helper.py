@@ -38,7 +38,10 @@ def get_file_list(files):
 # returns filenames from 'git diff' command
 # this is used to find target words in current diff (not from previous commits) 
 def get_diff_lines(file):
-    diff_bytes = subprocess.check_output(f"git diff HEAD {str(file)}", text=False)
+    try:
+        diff_bytes = subprocess.check_output(f"git diff HEAD {str(file)}", text=False)
+    except subprocess.CalledProcessError:
+        return
     diff = ""
     try:
         diff = diff_bytes.decode(source_file_encoding)
@@ -79,7 +82,7 @@ def print_found_line(line, line_num, target):
 # prints check results
 def show_results(count_total, count_new, count_existing):
     color_total = print_col_green if count_total == 0 else print_col_yellow if count_new == 0 else print_col_red
-    print(str_with_color("--- todos found: " + str(count_total) + " ---", color_total))
+    print(str_with_color("--- todos found: " + str(count_total) + " ---\n", color_total))
 
     if count_total == 0:
         return
