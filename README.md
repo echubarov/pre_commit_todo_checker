@@ -20,7 +20,7 @@ Copy the `pre-commit` file and the `todo_checker` folder in the `.git/hooks` fol
 
 If you want to set up a custom pre-commit hook, you will have to rewrite its logic manually.
 
-[Setting up custom pre-commit hook](https://github.com/eschubarov/pre_commit_todo_checker/edit/main/README.md#config)
+[Setting up custom pre-commit hook](https://github.com/eschubarov/pre_commit_todo_checker/blob/main/README.md#setting-up-custom-pre-commit-hook)
 
 ## Config
 
