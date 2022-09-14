@@ -27,7 +27,9 @@ If you want to set up a custom pre-commit hook, you will have to rewrite its log
 In the `todo_checker/todo_checker_config.py` file:
 
 `target_words`: words to look for in files.
+
 `source_file_encoding`: encoding to use when reading source files.
+
 `exit codes`: script exit codes (you may need those when setting up your custom pre-commit hook).
 
 ## Setting up custom pre-commit hook
