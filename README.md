@@ -16,11 +16,17 @@ TODOs found! Do you want to commit anyway? (y/n)
 
 ## How to set up
 
-Copy the `pre-commit` file and the `todo_checker` folder in the `.git/hooks` folder in your repository.
+* ### Install with python script:
 
-If you want to set up a custom pre-commit hook, you will have to rewrite its logic manually.
+    `python install.py $(path_to_your_repo)`
 
-[Setting up custom pre-commit hook](https://github.com/eschubarov/pre_commit_todo_checker/blob/main/README.md#setting-up-custom-pre-commit-hook)
+* ### Install by copying files manually
+
+    Copy the `pre-commit` file and the `todo_checker` folder in the `.git/hooks` folder in your repository.
+
+    If you want to set up a custom pre-commit hook, you will have to rewrite its logic manually.
+
+    [Setting up custom pre-commit hook](https://github.com/eschubarov/pre_commit_todo_checker/blob/main/README.md#setting-up-custom-pre-commit-hook)
 
 ## Config
 
