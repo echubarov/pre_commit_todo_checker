@@ -7,4 +7,4 @@ source_file_encoding = "utf8"
 # exit codes
 # see todo_checker.py description
 exit_commit         = 0
-exit_dont_commit    = 
+exit_dont_commit    = 1
