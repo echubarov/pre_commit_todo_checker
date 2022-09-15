@@ -5,6 +5,6 @@ target_words = ["todo"]
 source_file_encoding = "utf8"
 
 # exit codes
-# see file description
+# see todo_checker.py description
 exit_commit         = 0
-exit_dont_commit    = 1
+exit_dont_commit    = 
