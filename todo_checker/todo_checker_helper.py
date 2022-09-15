@@ -99,9 +99,9 @@ def finalize(count_total, count_new, count_existing):
         return exit_commit
 
     if count_new != 0:
-        print("TODOs found! Do you want to commit anyway? (y/n) ", end='')
-    elif count_existing != 0:
         print("New TODOs found! Do you want to commit anyway? (y/n) ", end='')
+    elif count_existing != 0:
+        print("TODOs found! Do you want to commit anyway? (y/n) ", end='')
 
     yes = {'yes', 'y'}
     choice = str(input()).split()[0].lower()
